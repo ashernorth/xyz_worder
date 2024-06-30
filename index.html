@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<font style="font-family:arial">
+
+<title>XYZ Worder</title>
+
+<hr>
+
+<button onclick="infoFunc()" class="allow-button-change" style="background-color:black; border-color:crimson; color:white;">Info</button>
+
+&nbsp;
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function infoFunc() {
+  alert("Current version: 1.02\n \nDeveloped by Asher North.\n \nWhat's New:\n \n1.02:\n-Bug fixes,\n-Changed bottom text colour again,\n-Added a green theme colour custimisation button,\n-Changed tab title,\n-Finally added a name to the website which is XYZ Worder,\n-Other small changes,\n \n1.01.9:\n-Bug fixes,\n-Changed bottom text color,\n-Added more new nouns, verbs, adjectives and adverbs,\n-Added 'What's New' section,\n-Fixed menu bar line,\n-Added theme colour customisation buttons,\n-Updated description text,\n-Other small changes,");
+}
+
+function changeColor(color){
+  $('.allow-change').css('color', color);
+}
+
+function changeButtonBorderColor(color) {
+	$('.allow-button-change').css('border-color', color);
+}
+
+function darkModeFunc() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  color-scheme: light dark;
+}
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: #d3d3d3;
+}
+
+.button {
+  border-color: light-dark(#000000, #ff0000);
+  background-color:black;
+  color:white;
+</style>
+
+<body>
+
+<button onclick="darkModeFunc()" class="allow-button-change" style="background-color:black; border-color:crimson; color:white;">Toggle Dark Mode</button>
+
+&nbsp;&nbsp;<small>Theme:</small>&nbsp;
+
+<button onclick="changeColor('#0055ff'); changeButtonBorderColor('#0055ff');" style="background-color:black; border-color:#0055ff; color:black;">-</button>
+&nbsp;
+<button onclick="changeColor('crimson'); changeButtonBorderColor('crimson');" style="background-color:black; border-color:crimson; color:black;">-</button>
+&nbsp;
+<button onclick="changeColor('yellow'); changeButtonBorderColor('yellow');" style="background-color:black; border-color:yellow; color:black;">-</button>
+&nbsp;
+<button onclick="changeColor('green'); changeButtonBorderColor('green');" style="background-color:black; border-color:green; color:black;">-</button>
+
+<hr>
+
+<p><h1><font size="+9" class="allow-change" style="color:crimson;"><big><b>Words.</b></big></font></h1></p>
+
+<h1 class="allow-change" style="color:crimson;">XYZ Worder</h1>
+
+<p>Get some random words by clicking the button below.</p>
+
+<p><div class="number"></div> <!This was a scrapped feature. It may be brought back in the future.>
+
+<button onclick="showRandomFrom(noun, verb, adjective);" class="allow-button-change" style="background-color:black; border-color:crimson; color:white;"><big><font size="+4">Word</font></big></button></p>
+
+<p><b><big><font style="color:blue">Noun</font>:</big></b><div class="nounOutput"><i>&nbsp;</i>
+</div></p>
+
+<p><b><big><font style="color:red">Verb</font>:</big></b><div class="verbOutput">&nbsp;</div></p>
+
+<p><b><big><font style="color:lime">Adjective</font> <font size="+2">/</font> <font style="color:#c800ff">Adverb</font>:</big></b><div class="adjectiveOutput">&nbsp;</div></p>
+
+<p><script>
+
+var noun = ["Grapeseed", "Gringus", "Loomster", "Mail", "Mattress", "Soap", "Persons", "Photograph", "Diplodocus", "Bread", "Maracas", "Utopia", "Tangerine", "Pot",  "News", "North", "East", "South", "West", "Bogey", "Plaque", "Clerk", "Array", "Uncle", "Panther", "Sage", "Cheddar", "Powder", "Plate", "Exoskeleton", "Meal", "Fertilizer", "Mouthful", "Salad", "Beef", "Train", "Tomato", "Pineapple", "Mason", "Dragonfruit", "Rocket", "Ice", "Turkey", "Earth", "Copper", "Air", "Ball", "Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Moon", "Business", "Sales", "Clay", "Refuge", "ABC", "Bronze", "Silver", "Gold", "Platinum", "Plastic", "Cat", "Dog", "Bag", "Bossman", "Character", "Ratings", "Pond", "Salt", "Top", "Chairs", "Masterpiece", "Salmon", "Logic", "Cake", "Package", "Illusion", "Jeopardy", "Brick", "Flute", "Sled", "Medication", "Wheat", "Rubber", "Blimp", "Word", "Uranium", "Deuterium", "Tube", "Cadmium", "Tuft", "Version", "Apex", "Champion", "Amethyst", "Pirate", "Monkey", "Toad", "Velocity", "Jeans", "Pants", "Videotape", "Spider", "Showdown", "Goanna", "Komodo-Dragon", "File", "Tanuki", "Lighthouse", "Raccoon", "Snake", "Sand", "Blockhead", "Brain", "Rope", "Ooblek", "Whisker", "Bark", "Chocolate", "Jello", "Jelly", "Marshmallow", "Electrodynamics", "Aeroplane", "Dominator", "Quintessence", "Thermodynamics", "Aerodynamics", "Stereo", "Madness", "Thermometer", "Track", "Base", "Jumper", "Time", "Machine", "Funk", "Theory", "Adventure", "Club", "Hexagon", "Everything", "Geometry", "Finger", "Wave", "Title", "Cacophony", "Chaos", "Berry", "Cherry", "Dairy", "Grain", "Vegetable", "Fruit", "Protein", "Meat", "Pufferfish", "Discovery", "Salary", "Barbarian", "Paper", "Citizen", "Haggus", "Prickle", "Dirt", "Fire", "Fantasy", "Heap", "Education", "Newspaper", "Mystery", "Portal", "Subdivision", "Acid", "Water", "Placemat", "Band", "Bonus", "Cream", "Phobos"];
+
+var verb = ["Shake", "Get", "Question", "Sizzle", "Meow", "Hover", "Clank", "Balance", "Plot", "Slap", "Float", "Postpone", "Ploat", "Establish", "Forget", "Uncoil", "Allay", "Slosh", "Plank", "Lob", "Thrust", "Trust", "Slash", "Type", "Spill", "Vex", "Clog", "Plug", "Hop", "Order", "Crawl", "Trot", "Command", "Quote", "Direct", "Accept", "Implode", "Explode", "Crank", "Saddle", "Egged", "Toilet-papered", "Add", "Subtract", "Multiply", "Divide", "Continue", "Extract", "Excavate", "Mold", "Blow", "Splish", "Crop", "Object", "Read", "Sell", "Toll", "Ran", "Plop", "Utilize", "Saw", "Wait", "Remix", "Distinguish", "Hide", "Claim", "Disclaim", "Admire", "Patent", "Copyright", "Help", "Flatten", "Pick", "Splat", "Fight", "Squeak", "Freeze", "Boil", "Burn", "Inflict", "Reflect", "Deflect", "Flex", "Solidify", "Liquefy", "Gasify", "Autoclick", "Swim", "Hold", "Blackmail", "Want", "Erupt", "File", "Pounce", "Dawdle", "Imprison", "Boost", "Watch", "Bowl", "Use", "Hack", "Record", "Satisfy", "Unsatisfy", "Eat", "Rob", "Scroll", "Cackle", "Grow", "Swig", "Chug", "Change", "Run", "Ran", "Stack", "Hang", "Crease", "Propel", "Prepare", "Punctuate", "Advance", "Block", "Bark", "Woof", "Crackle", "Edit", "Deadlock", "Heist", "Go", "Cycle", "Step", "Clutter", "Club", "Force", "Blast", "Process", "Dash", "Seafare", "Pelt", "Peg", "Educate", "Charge", "Soak", "Hypercharge", "Eject", "Descend", "Ascend", "Detect"]
+
+var adjective = ["Olympic", "Crimson", "Velvet", "Scarlet", "Teal", "Gilded", "Plentiful", "Good", "Less", "More", "Wild", "Mild", "Supreme", "Lonesome", "Inebriated", "Grubby", "Original", "Mini", "Tropical", "Lunar", "Solar", "Easy", "Odd", "Charismatic", "Stopped", "Tremendous", "Electric", "Junior", "Untoward", "Preposterous", "Dark", "Plump", "Oily", "Pyro", "Biological", "Automatic", "Strange", "Special", "Lime", "Painted", "Untouched", "Forgotten", "Tan", "Uncoloured", "Obscure", "Old", "Hagged", "Crusty", "Plain", "Grey", "Snuffly", "Sprinkly", "Stupid", "Silly", "Weird", "Crunchy", "Featured", "Young", "Youthful", "Ugly", "Disgusting", "Sad", "Mad", "Glad", "Rad", "Invulnerable", "Red", "Broken", "Second-hand", "Polished", "Painful", "Unknown", "Undiscovered", "Flaming", "Subzero", "Hospitalized", "Unstoppable", "Spotted", "Stuck", "Valuable", "Breathtaking", "Antique", "Legendary", "Worthless", "Exotic", "Jumbo", "Infinite", "Camo", "Edgy", "Dusty", "Wet", "Hexagonal", "Exquisite", "Silent", "Lost", "Sick", "Numb", "Verbal", "Solid", "Liquid", "Active", "Inactive", "Satisfied", "Unsatisfied", "Mint", "Navy-blue", "Swimmingly", "Evil", "Geometrical", "Aero", "Polar", "Back", "Dry", "Tidal", "Chaotic", "Prickly", "Octagonal", "Malleable", "Educated", "Micro", "Known", "Smooth", "Fast", "Far", "Crispy", "Wordy"]
+
+function showRandomFrom(nounArray, verbArray, adjectiveArray){
+  document.getElementsByClassName("nounOutput")[0].innerHTML = nounArray[Math.floor(Math.random() * nounArray.length)];
+document.getElementsByClassName("verbOutput")[0].innerHTML = verbArray[Math.floor(Math.random() * verbArray.length)];
+document.getElementsByClassName("adjectiveOutput")[0].innerHTML = adjectiveArray[Math.floor(Math.random() * adjectiveArray.length)];
+}
+
+</script></p>
+
+<p><h2 style="color:crimson;" class="allow-change">How To Use:</h2></p>
+
+<p>Press the 'Word' button for three random words to pop up. There will be one <font style="color:#0077b6;"><b>noun</b></font>, one <font style="color:#FF474C;"><b>verb</b></font>, and one <font style="color:yellowgreen;"><b>adjective</b></font> or <font style="color:#ea00ff;"><b>adverb</b></font>. Congrats! Now you have three random words.</p>
+
+<p><font style="color:#ff6200;" size="+1"><b>Words are fabulous.</b></font></p>
+
+<style>
+.headColor {
+  color:crimson;
+}
+.buttonColor {
+  background-color:black; border-color:crimson; color:white;
+}
+</style>
+
+<div class="intro">
+
+</font>
+
+</body>
+
+</html>
