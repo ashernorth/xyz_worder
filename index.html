@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="icon" type="image/png" href="favicon.png"/>
+
+<body style="zindex:1; position:relative">
+
+<font style="font-family:arial">
+
+<title>XYZ Worder</title>
+
+<style>
+body {
+  text-align: left;
+ }
+ </style>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #000000;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #00000044;
+  padding: 12px 16px;
+  min-width: 16px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<hr>
+
+<button onclick="alert('Current version: 1.02.4\n \nDeveloped by Asher North.\n \nWhat\'s New:\n \n1.02.4:\n-Changed bottom text colour ANOTHER TIME,\n-Added a pink theme colour customisation button,\n-Added a theme button that creates a dropdown that shows you the theme colour customisation buttons,\n-More small changes,\n-Made all buttons turn the cursor to a pointer when hovering,\n-May have added a juicy secret ;\)\n-Added a textbox for keeping track of your favourite word combos,\n \n1.02.2:\n-Added an orange theme colour customisation button,\n-Changed bottom text colour ONCE AGAIN!\n-Made some other small changes,\n \n1.02.1:\n-Added a favicon,\n-Added amazing descriptions for the website,\n-Added a purple theme colour customisation button,\n-Changed bottom text colour AGAIN,\n-Swapped the crimson and blue theme colour customisation buttons around,\n \n1.02:\n-Bug fixes,\n-Changed bottom text colour again,\n-Added a green theme colour custimisation button,\n-Changed tab title,\n-Finally added a name to the website which is XYZ Worder,\n-Migrated to Github,\n-Other small changes,\n \n1.01.9:\n-Bug fixes,\n-Changed bottom text color,\n-Added more new nouns, verbs, adjectives and adverbs,\n-Added a What\'s New section,\n-Fixed menu bar line,\n-Added theme colour customisation buttons,\n-Updated description text,\n-Other small changes,')" class="allow-button-change" style="background-color:black; border-color:crimson; color:white; cursor:pointer;">Info</button>
+
+&nbsp;
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+function changeColor(color){
+  $('.allow-change').css('color', color);
+}
+
+function changeButtonBorderColor(color) {
+	$('.allow-button-change').css('border-color', color);
+}
+
+function darkModeFunc() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function showHtmlDiv() {
+  var htmlShow = document.getElementById("html-show");
+  if (htmlShow.style.display === "none") {
+    htmlShow.style.display = "block";
+  } else {
+    htmlShow.style.display = "none";
+  }
+}
+
+function dropFunc() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root {
+  color-scheme: light dark;
+}
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: #d3d3d3;
+}
+</style>
+<button onclick="darkModeFunc()" class="allow-button-change" style="background-color:black; border-color:crimson; color:white; cursor:pointer;">Toggle Dark Mode</button>
+&nbsp;
+
+<button style="background-color:black; border-color:crimson; color:white; cursor:pointer;" onclick="myFunction()" class="dropbtn allow-button-change">Theme</button>
+<button style="background-color:#00000000; border-color:#00000000; color:#00000000;" onclick="alert('You found a secret button, have a transparent theme colour.'); changeColor('#88888888'); changeButtonBorderColor('#88888888');"></button>
+<div class="dropdown">
+  <div id="myDropdown" class="dropdown-content">
+    <p><button onclick="changeColor('crimson'); changeButtonBorderColor('crimson');" style="background-color:black; border-color:crimson; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('#0055ff'); changeButtonBorderColor('#0055ff');" style="background-color:black; border-color:#0055ff; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('yellow'); changeButtonBorderColor('yellow');" style="background-color:black; border-color:yellow; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('green'); changeButtonBorderColor('green');" style="background-color:black; border-color:green; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('purple'); changeButtonBorderColor('purple');" style="background-color:black; border-color:purple; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('#ff6a00'); changeButtonBorderColor('#ff6a00');" style="background-color:black; border-color:#ff6a00; color:black; cursor:pointer;">-</button>
+&nbsp;
+<button onclick="changeColor('#ff0084'); changeButtonBorderColor('#ff0084');" style="background-color:black; border-color:#ff0084; color:black; cursor:pointer;">-</button></p>
+  </div>
+
+<hr>
+
+<p><h1><font size="+9" class="allow-change" style="color:crimson;"><big><b>Words.</b></big></font></h1></p>
+
+<h1 class="allow-change" style="color:crimson;">XYZ Worder</h1>
+
+<div class="bragOutput"></div>
+
+<p><button onclick="showRandomFrom(noun, verb, adjective);" class="allow-button-change" style="background-color:black; border-color:crimson; color:white; cursor:pointer;"><big><font size="+4">Word</font></big></button></p>
+
+<p><b><big><font style="color:blue">Noun</font>:</big></b><div class="nounOutput"><i>&nbsp;</i>
+</div></p>
+
+<p><b><big><font style="color:red">Verb</font>:</big></b><div class="verbOutput">&nbsp;</div></p>
+
+<p><b><big><font style="color:lime">Adjective</font> <font size="+2">/</font> <font style="color:#c800ff">Adverb</font>:</big></b><div class="adjectiveOutput">&nbsp;</div></p>
+
+<p><script>
+
+var noun = ["Grapeseed", "Gringus", "Loomster", "Mail", "Mattress", "Soap", "Persons", "Photograph", "Diplodocus", "Bread", "Maracas", "Utopia", "Tangerine", "Pot",  "News", "North", "East", "South", "West", "Bogey", "Plaque", "Clerk", "Array", "Uncle", "Panther", "Sage", "Cheddar", "Powder", "Plate", "Exoskeleton", "Meal", "Fertilizer", "Mouthful", "Salad", "Beef", "Train", "Tomato", "Pineapple", "Mason", "Dragonfruit", "Rocket", "Ice", "Turkey", "Copper", "Air", "Ball", "Mercury", "Pluto", "Moon", "Business", "Sales", "Clay", "Refuge", "Bronze", "Silver", "Gold", "Platinum", "Plastic", "Cat", "Dog", "Bag", "Bossman", "Character", "Ratings", "Pond", "Salt", "Top", "Chairs", "Masterpiece", "Salmon", "Logic", "Cake", "Package", "Illusion", "Jeopardy", "Brick", "Flute", "Sled", "Medication", "Wheat", "Rubber", "Blimp", "Word", "Uranium", "Deuterium", "Tube", "Cadmium", "Tuft", "Version", "Apex", "Champion", "Amethyst", "Pirate", "Monkey", "Toad", "Velocity", "Jeans", "Pants", "Videotape", "Spider", "Showdown", "Goanna", "Komodo-Dragon", "File", "Tanuki", "Lighthouse", "Raccoon", "Snake", "Sand", "Blockhead", "Brain", "Rope", "Ooblek", "Whisker", "Bark", "Chocolate", "Jello", "Jelly", "Marshmallow", "Electrodynamics", "Aeroplane", "Dominator", "Quintessence", "Thermodynamics", "Aerodynamics", "Stereo", "Madness", "Thermometer", "Track", "Base", "Jumper", "Time", "Machine", "Funk", "Theory", "Adventure", "Club", "Hexagon", "Everything", "Geometry", "Finger", "Wave", "Title", "Cacophony", "Chaos", "Berry", "Cherry", "Dairy", "Grain", "Vegetable", "Fruit", "Protein", "Meat", "Pufferfish", "Discovery", "Salary", "Barbarian", "Paper", "Citizen", "Haggus", "Prickle", "Dirt", "Fire", "Fantasy", "Heap", "Education", "Newspaper", "Mystery", "Portal", "Subdivision", "Acid", "Water", "Placemat", "Band", "Bonus", "Cream", "Phobos"];
+
+var verb = ["Shake", "Get", "Question", "Sizzle", "Meow", "Hover", "Clank", "Balance", "Plot", "Slap", "Float", "Postpone", "Ploat", "Establish", "Forget", "Uncoil", "Allay", "Slosh", "Plank", "Lob", "Thrust", "Trust", "Slash", "Type", "Spill", "Vex", "Clog", "Plug", "Hop", "Order", "Crawl", "Trot", "Command", "Quote", "Direct", "Accept", "Implode", "Explode", "Crank", "Saddle", "Egged", "Toilet-paper", "Add", "Subtract", "Multiply", "Divide", "Continue", "Extract", "Excavate", "Mold", "Blow", "Splish", "Crop", "Object", "Read", "Sell", "Toll", "Ran", "Plop", "Utilize", "Saw", "Wait", "Remix", "Distinguish", "Hide", "Claim", "Disclaim", "Admire", "Patent", "Copyright", "Help", "Flatten", "Pick", "Splat", "Fight", "Squeak", "Freeze", "Boil", "Burn", "Inflict", "Reflect", "Deflect", "Flex", "Solidify", "Liquefy", "Gasify", "Autoclick", "Swim", "Hold", "Blackmail", "Want", "Erupt", "File", "Pounce", "Dawdle", "Imprison", "Boost", "Watch", "Bowl", "Use", "Hack", "Record", "Satisfy", "Unsatisfy", "Eat", "Rob", "Scroll", "Cackle", "Grow", "Swig", "Chug", "Change", "Run", "Ran", "Stack", "Hang", "Crease", "Propel", "Prepare", "Punctuate", "Advance", "Block", "Bark", "Woof", "Crackle", "Edit", "Deadlock", "Heist", "Go", "Cycle", "Step", "Clutter", "Club", "Force", "Blast", "Process", "Dash", "Seafare", "Pelt", "Peg", "Educate", "Charge", "Soak", "Hypercharge", "Eject", "Descend", "Ascend", "Detect"]
+
+var adjective = ["Olympic", "Crimson", "Velvet", "Scarlet", "Teal", "Gilded", "Plentiful", "Good", "Less", "More", "Wild", "Mild", "Supreme", "Lonesome", "Inebriated", "Grubby", "Original", "Mini", "Tropical", "Lunar", "Solar", "Easy", "Odd", "Charismatic", "Stopped", "Tremendous", "Electric", "Junior", "Preposterous", "Dark", "Plump", "Oily", "Pyro", "Biological", "Automatic", "Strange", "Special", "Lime", "Painted", "Untouched", "Forgotten", "Tan", "Uncoloured", "Obscure", "Old", "Hagged", "Crusty", "Plain", "Grey", "Snuffly", "Sprinkly", "Stupid", "Silly", "Weird", "Crunchy", "Featured", "Young", "Youthful", "Ugly", "Disgusting", "Sad", "Mad", "Glad", "Rad", "Invulnerable", "Red", "Broken", "Second-hand", "Polished", "Painful", "Unknown", "Undiscovered", "Flaming", "Subzero", "Hospitalized", "Unstoppable", "Spotted", "Stuck", "Valuable", "Breathtaking", "Antique", "Legendary", "Worthless", "Exotic", "Jumbo", "Infinite", "Camo", "Edgy", "Dusty", "Wet", "Hexagonal", "Exquisite", "Silent", "Lost", "Sick", "Numb", "Verbal", "Solid", "Liquid", "Active", "Inactive", "Satisfied", "Unsatisfied", "Mint", "Swimmingly", "Evil", "Geometrical", "Aero", "Polar", "Dry", "Tidal", "Chaotic", "Prickly", "Octagonal", "Malleable", "Educated", "Micro", "Known", "Smooth", "Fast", "Far", "Crispy", "Wordy", "Outstanding"]
+
+var bragArray = ["A very wonderful website.", "A very good website.", "A very great website.", "A very high quality website.", "A very proper website.", "A very helpful website.", "A very breathtaking website.", "A very legendary website.", "A very amazing website.", "A very fabulous website.", "A very wordy website.", "A very satisfying website.", "A very solid website.", "A very exquisite website.", "A very admirable website.", "A very special website.", "A very supreme website.", "A very terrific website.", "A very outstanding website.", "A very A-grade website.", "A very sophisticated website.", "A very VERY good website.", "A very well made website."]
+
+var bragWord = bragArray[Math.floor(Math.random() * bragArray.length)]
+
+function showRandomFrom(nounArray, verbArray, adjectiveArray){
+document.getElementsByClassName("nounOutput")[0].innerHTML = nounArray[Math.floor(Math.random() * nounArray.length)];
+document.getElementsByClassName("verbOutput")[0].innerHTML = verbArray[Math.floor(Math.random() * verbArray.length)];
+document.getElementsByClassName("adjectiveOutput")[0].innerHTML = adjectiveArray[Math.floor(Math.random() * adjectiveArray.length)];
+}
+
+function showRandomFromBrag(bragArray){
+document.getElementsByClassName("bragOutput")[0].innerHTML = bragArray[Math.floor(Math.random() * bragArray.length)];
+}
+
+</script></p>
+
+<body onload="showRandomFromBrag(bragArray);">
+
+<p><h2 style="color:crimson;" class="allow-change">How To Use:</h2></p>
+
+<p>Press the 'Word' button for three random words to pop up. There will be one <font style="color:#0077b6;"><b>noun</b></font>, one <font style="color:#FF474C;"><b>verb</b></font>, and one <font style="color:yellowgreen;"><b>adjective</b></font> or <font style="color:#ea00ff;"><b>adverb</b></font>. Congrats! Now you have three random words.</p>
+
+<p><font size="+1" class="allow-change" style="color:crimson;"><b>Keep track of your favourite word combinations below.</b></font></p>
+
+<p>&nbsp;<font contenteditable="true" style="font-family:garamond;">--Type here--</font>
+
+<hr>
+
+<p><font style="color:#143;" size="+1"><b>Words are fabulous.</b></font></p>
+
+<style>
+.headColor {
+  color:crimson;
+}
+.buttonColor {
+  background-color:black; border-color:crimson; color:white;
+}
+</style>
+
+<div class="intro">
+
+<div id="html-show">
+  <p class="text-html" id="htmlContent">
+  </p>
+</div>
+
+</font>
+
+</body>
+
+</html>
