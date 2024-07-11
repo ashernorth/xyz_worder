@@ -47,18 +47,11 @@ body {
   padding: 25px;
   background-color: white;
   color: black;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-image: url("gradLight.png");
-  background-repeat: repeat-x;
 }
 
 .dark-mode {
-  background-image: url("gradDark.png");
-  background-repeat: repeat-x;
   color: #d3d3d3;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-color: black;
 }
 
 .headColor {
