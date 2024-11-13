@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>Blasting Grounds</title>
+<link rel="icon" type="image/png" href="faviconBlast.png"/>
+</head>
+<style>
+body {
+  padding:30px;
+  font-family: arial;
+  background-color:#5e2700ee;
+  color:white;
+}
+
+.section {
+  border-radius:30px;
+  border-style: solid;
+  border-color: black;
+  background-color:#595757;
+  padding:10px;
+}
+
+.center {
+  text-align: center;
+}
+</style>
+<body>
+<h1 style="text-align:center; text-shadow:5px 5px #595757bb;">The Blasting Grounds</h1>
+<!--<p class="center"><b>Grand blast count: <font id="grand">0</font>/</b></p>-->
+<hr>
+<p><h2>By Asher North</h2></p>
+<p>The number you get from blasting resembles how many sheets of paper you blasted per blast. The amount you blast is completely random, and the blasters progress in how large their maximum blast is. You need to reach new paper blasting goals on each new blaster to progress and unlock more blasters. Press <big><button onclick="newsub()" id="buttonsub" style="border-color:black; border-radius:5px;">Go!</button></big></p><hr>
+<div class="section"><p><p id="heresub">You will need to read the tutorial to unlock this blaster.</p></p>
+<p id="here">&nbsp;</p></div><hr>
+<div class="section"><p id="here0">You will need 5 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here1">&nbsp;</p></div><hr>
+<div class="section"><p id="here2">You will need 20 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here3">&nbsp;</p></div><hr>
+<div class="section"><p id="here4">You will need 50 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here5">&nbsp;</p></div><hr>
+<div class="section"><p id="here6">You will need 100 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here7">&nbsp;</p></div><hr>
+<div class="section"><p id="here8">You will need 250 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here9">&nbsp;</p></div><hr>
+<div class="section"><p id="here10">You will need 500 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here11">&nbsp;</p></div><hr>
+<div class="section"><p id="here12">You will need 1000 layers broken on your latest blast from the previous blaster to unlock this blaster.</p>
+<p id="here13">&nbsp;</p></div><hr>
+<p id="win">You will need 3000 layers broken on your latest blast from the previous blaster to complete the game.</p>
+<script>
+const g = w + w0 + w1 + w2 + w3 + w4 + w5 + w6;
+document.getElementById('grand').innerHTML = g;
+
+function displayWin() {
+  document.getElementById('win').innerHTML = "Congratulations. You have completed the Blasting Grounds. Stay on the watch for more new blasters coming out soon.";
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+function newsub() {
+  let nsub = ('<button onclick="yes()" id="button" style="border-color:#75cfff; border-radius:5px;">Tap Water Blaster</button>');
+  document.getElementById('heresub').innerHTML = nsub;
+  document.getElementById('buttonsub').disabled = true;
+}
+
+async function yes() {
+  document.getElementById("button").disabled = true;
+  document.getElementById("here").innerHTML = ('Blasting...');
+  await sleep(1000)
+  document.getElementById("button").disabled = false;
+  var w = Math.round(Math.random() * 6);
+  var m = w + '/5';
+  document.getElementById("here").innerHTML = m;
+  if (w >= 5) new0();
+}
+
+function new0() {
+  let n = ('<button onclick="yes0()" id="button0" style="border-color:#521300; border-radius:5px;">Bombardier Beetle Blaster</button>');
+  document.getElementById('here0').innerHTML = n;
+}
+
+async function yes0() {
+  document.getElementById("button0").disabled = true;
+  document.getElementById("here1").innerHTML = ('Blasting...');
+  await sleep(3000)
+  document.getElementById("button0").disabled = false;
+  let w0 = Math.round(Math.random() * 24);
+  let m0 = w0 + '/20';
+  document.getElementById('here1').innerHTML = m0;
+  if (w0 >= 20) new1();
+}
+
+function new1() {
+  let n0 = ('<button onclick="yes1()" id="button1" style="border-color:blue; border-radius:5px;">Pressure Washer Blaster</button>')
+  document.getElementById('here2').innerHTML = n0;
+}
+
+async function yes1() {
+  document.getElementById("button1").disabled = true;
+  document.getElementById("here3").innerHTML = ('Blasting...');
+  await sleep(5000)
+  document.getElementById("button1").disabled = false;
+  let w1 = Math.round(Math.random() * 57);
+  let m1 = w1 + '/50';
+  document.getElementById('here3').innerHTML = m1;
+  if (w1 >= 50) new2();
+}
+
+function new2() {
+  let n1 = ('<button onclick="yes2()" id="button2" style="border-color:orange; border-radius:5px;">Bunsen Burner Blaster</button>')
+  document.getElementById('here4').innerHTML = n1;
+}
+
+async function yes2() {
+  document.getElementById("button2").disabled = true;
+  document.getElementById("here5").innerHTML = ('Blasting...');
+  await sleep(10000)
+  document.getElementById("button2").disabled = false;
+  let w2 = Math.round(Math.random() * 115);
+  let m2 = w2 + '/100';
+  document.getElementById('here5').innerHTML = m2;
+  if (w2 >= 100) new3();
+}
+
+function new3() {
+  let n2 = ('<button onclick="yes3()" id="button3" style="border-color:lime; border-radius:5px;">Piranha Solution Spray Bottle Blaster</button>')
+  document.getElementById('here6').innerHTML = n2;
+}
+
+async function yes3() {
+  document.getElementById("button3").disabled = true;
+  document.getElementById("here7").innerHTML = ('Blasting...');
+  await sleep(15000)
+  document.getElementById("button3").disabled = false;
+  let w3 = Math.round(Math.random() * 285);
+  let m3 = w3 + '/250';
+  document.getElementById('here7').innerHTML = m3;
+  if (w3 >= 250) new4();
+}
+
+function new4() {
+  let n3 = ('<button onclick="yes4()" id="button4" style="border-color:grey; border-radius:5px;">Molten Lead Hose Blaster</button>')
+  document.getElementById('here8').innerHTML = n3;
+}
+
+async function yes4() {
+  document.getElementById("button4").disabled = true;
+  document.getElementById("here9").innerHTML = ('Blasting...');
+  await sleep(20000)
+  document.getElementById("button4").disabled = false;
+  let w4 = Math.round(Math.random() * 570);
+  let m4 = w4 + '/500';
+  document.getElementById('here9').innerHTML = m4;
+  if (w4 >= 500) new5();
+}
+
+function new5() {
+  let n4 = ('<button onclick="yes5()" id="button5" style="border-color:#ff4000; border-radius:5px;">Flamethrower Blaster</button>')
+  document.getElementById('here10').innerHTML = n4;
+}
+
+async function yes5() {
+  document.getElementById("button5").disabled = true;
+  document.getElementById("here11").innerHTML = ('Blasting...');
+  await sleep(30000)
+  document.getElementById("button5").disabled = false;
+  let w5 = Math.round(Math.random() * 1083);
+  let m5 = w5 + '/1000';
+  document.getElementById('here11').innerHTML = m5;
+  if (w5 >= 1000) new6();
+}
+
+function new6() {
+  let n5 = ('<button onclick="yes6()" id="button6" style="border-color:green; border-radius:5px;">Piranha Solution Pressure Washer Blaster</button>')
+  document.getElementById('here12').innerHTML = n5;
+}
+
+async function yes6() {
+  document.getElementById("button6").disabled = true;
+  document.getElementById("here13").innerHTML = ('Blasting...');
+  await sleep(40000)
+  document.getElementById("button6").disabled = false;
+  let w6 = Math.round(Math.random() * 3261);
+  let m6 = w6 + '/3000';
+  document.getElementById('here13').innerHTML = m6;
+  if (w6 >= 3000) alert('Congratulations. You have completed the Blasting Grounds. Stay on the watch for more new blasters coming out soon.');
+  if (w6 >= 3000) displayWin();
+}
+</script>
+<small style="color:grey;">Version: 1.00.5</small>
+</body>
+</html>
